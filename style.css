@@ -1,0 +1,147 @@
+html {
+    font: 25px serif;
+}
+
+#grad {
+    background-image: linear-gradient(70deg, #9c7417, #7d362d, #9c7417);
+}
+
+.tighten {
+    max-width: 800px;
+    margin: auto;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 1.5em;
+}
+
+p {
+    margin: .75em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: .2em;
+    font-weight: bold;
+}
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.5em;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5,h6 {
+    font-size: 1em;
+}
+
+table {
+    font-size: .8em;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+thead {
+    background-color: rgb(215, 193, 163);
+}
+
+td,th {
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.topBar {
+    overflow: hidden;
+    display: flex;
+    font-size: 1.25em;
+    background-color: #f7f7f7;
+    color: rgb(60, 29, 11);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.infoBar {
+    overflow: hidden;
+    display: flex;
+    background-color: rgb(62, 35, 30);
+    color: #f7f7f7;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .infoBar th, .infoBar td {
+        font-size: 1.2em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .infoBar a {
+        float: left;
+        color: #f7f7f7;
+        text-align: center;
+        text-decoration: none;
+        padding: 8px;
+        border: 3px solid #f7f7f7;
+        margin: 0px;
+    }
+
+    .infoBar a:hover {
+        background-color: #f7f7f7;
+        color: black;
+    }
+
+.spacing {
+    height: 10%;
+}
+
+.mainContent {
+    padding: 2rem;
+}
+
+.mainContent, .topBar, img {
+    background-color: #f2ece4;
+    border: 0px solid #555;
+}
+
+hr {
+    color: #555
+}
+
+.toggle {
+    display: flex;
+}
+
+.toggle .triangle {
+    width: 0.6875em; 
+    height: 2.25em; 
+    display: block; 
+    fill: inherit; 
+    flex-shrink: 0; 
+    backface-visibility: hidden; 
+    transform: rotateZ(90deg); 
+    opacity: 1;
+}
+
+.toggle .toggleContainer {
+    flex-grow: 1;
+}
+
+.toggle .triangle, .toggle {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
