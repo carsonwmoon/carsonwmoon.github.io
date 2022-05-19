@@ -1,8 +1,9 @@
 html {
-    font: 25px serif;
+    font: 20px "Candara"; /*Candara, Cambria, Monospace, Roboto, Courier New, Verdana, Didot, Lucida Bright*/
 }
 
 #grad {
+    background-image: linear-gradient(110deg, #092252, #5c6bb4, #092252);
     background-image: linear-gradient(70deg, #9c7417, #7d362d, #9c7417);
 }
 
@@ -11,8 +12,16 @@ html {
     margin: auto;
 }
 
+iframe {
+    height: 500px;
+    width: 100%
+}
+
 ul {
     list-style-type: square;
+}
+
+ul, ol {
     margin-left: 1.5em;
 }
 
@@ -21,11 +30,11 @@ p {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    margin: .2em;
+    padding-top: .5em;
     font-weight: bold;
 }
 h1 {
-    font-size: 2.5em;
+    font-size: 3em;
 }
 h2 {
     font-size: 2em;
@@ -56,12 +65,19 @@ td,th {
     padding: 10px;
 }
 
+.topBar p {
+    font-size: .75em;
+}
+
+.topBar h1 {
+    padding-top: .25em;
+}
+
 .topBar {
     overflow: hidden;
     display: flex;
     font-size: 1.25em;
-    background-color: #f7f7f7;
-    color: rgb(60, 29, 11);
+    background-color: #ffffff;
     width: 100%;
     height: auto;
     display: flex;
@@ -70,11 +86,18 @@ td,th {
     text-align: center;
 }
 
+
+a.anchor {
+    position: relative;
+    top: -100px;
+}
+
 .infoBar {
-    overflow: hidden;
     display: flex;
-    background-color: rgb(62, 35, 30);
-    color: #f7f7f7;
+    overflow: hidden;
+    flex-wrap: wrap;
+    background-color: #62906e;
+    color: #ffffff;
     width: 100%;
     height: auto;
     display: flex;
@@ -82,24 +105,56 @@ td,th {
     align-items: center;
 }
 
-    .infoBar th, .infoBar td {
-        font-size: 1.2em;
-        margin-left: auto;
-        margin-right: auto;
+    .flex-container {
+        padding: 0;
+        margin: 10px;
+        list-style: none;
+        -ms-box-orient: horizontal;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .wrap { 
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .infoBar {
+        list-style-type: none;
+        overflow: hidden;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .flex-container li {
+        padding: 5px;
+        width: wrap;
+        margin: 5px;
+        text-align: center;
     }
     
     .infoBar a {
         float: left;
-        color: #f7f7f7;
+        color: #ffffff;
         text-align: center;
         text-decoration: none;
         padding: 8px;
-        border: 3px solid #f7f7f7;
+        border: 3px solid #ffffff;
         margin: 0px;
+        transition-property: background-color, color;
+        transition-duration: 750ms;
     }
 
     .infoBar a:hover {
-        background-color: #f7f7f7;
+        background-color: #ffffff;
         color: black;
     }
 
@@ -109,34 +164,43 @@ td,th {
 
 .mainContent {
     padding: 2rem;
-}
-
-.mainContent, .topBar, img {
-    background-color: #f2ece4;
-    border: 0px solid #555;
-}
-
-hr {
-    color: #555
+    padding-top: 1rem;
 }
 
 .toggle {
     display: flex;
+    margin: 4px;
+    margin-left: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.toggle .toggleTop p {
+    font-size: 1.1em;
 }
 
 .toggle .triangle {
+    margin-top: .6em;
+    margin-left: .25em;
     width: 0.6875em; 
-    height: 2.25em; 
+    height: 2.5em; 
     display: block; 
     fill: inherit; 
     flex-shrink: 0; 
     backface-visibility: hidden; 
     transform: rotateZ(90deg); 
     opacity: 1;
+    transition: transform 500ms ease-out 0s;
 }
 
 .toggle .toggleContainer {
     flex-grow: 1;
+    margin: 4px;
+    padding: 4px
+}
+
+.toggle img {
+    margin-left: 8px;
 }
 
 .toggle .triangle, .toggle {
@@ -144,4 +208,42 @@ hr {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+@media (prefers-color-scheme: light) {
+    .mainContent, .topBar, img, iframe, table {
+        color: #282b2c;
+        background-color: #e4eff2;
+    }
+
+    table {
+        color: #282b2c;
+    }
+    
+    .toggle .triangle {
+        fill: black;
+    }
+
+    .toggle {
+        background-color: #d0d5d5;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .mainContent, .topBar, img, iframe, table {
+        color: #e4eff2;
+        background-color: #282b2c;
+    }
+
+    thead {
+        color: #282b2c;
+    }
+    
+    .toggle .triangle {
+        fill: white;
+    }
+
+    .toggle {
+        background-color: #353939;
+    }
 }
