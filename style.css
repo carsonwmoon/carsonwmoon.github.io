@@ -7,14 +7,31 @@ html {
     background-image: linear-gradient(70deg, #9c7417, #7d362d, #9c7417);
 }
 
+hr {
+    height: 4px;
+    background-color: grey;
+}
+
+.videoEmbed {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .tighten {
     max-width: 800px;
     margin: auto;
-}
-
-iframe {
-    height: 315px;
-    width: 100%
 }
 
 ul {
@@ -195,8 +212,8 @@ a.anchor {
 
 .toggle .toggleContainer {
     flex-grow: 1;
-    margin: 4px;
-    padding: 4px
+    margin: 2px;
+    padding: 2px
 }
 
 .toggle img {
