@@ -208,9 +208,9 @@ a.anchor {
     fill: inherit; 
     flex-shrink: 0; 
     backface-visibility: hidden; 
-    transform: rotateZ(90deg); 
+    transform: rotateZ(180deg); 
     opacity: 1;
-    transition: transform 500ms ease-out 0s;
+    transition: transform 750ms ease-out 0s;
 }
 
 .toggle .toggleContainer {
