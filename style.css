@@ -186,10 +186,12 @@ a.anchor {
 
 .toggle {
     display: flex;
-    margin: 4px;
+    margin: 5px;
     margin-left: 0;
     padding-right: 10px;
     padding-left: 10px;
+    border-width: 4px;
+    border-style: solid;
 }
 
 .toggle .toggleTop p {
@@ -245,6 +247,12 @@ a.anchor {
 
     .toggle {
         background-color: #d0d5d5;
+        border-color: #d0d5d5;
+    }
+
+    .toggle:hover {
+        /* background-color: transparent; */
+        border-color: #e4eff2;
     }
 }
 
@@ -264,5 +272,11 @@ a.anchor {
 
     .toggle {
         background-color: #353939;
+        border-color: #353939;
+    }
+
+    .toggle:hover {
+        /* background-color: transparent; */
+        border-color: #282b2c;
     }
 }
