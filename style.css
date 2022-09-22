@@ -217,7 +217,9 @@ a.anchor {
 }
 
 .toggle img {
-    margin-left: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: transparent;
 }
 
 .toggle .triangle, .toggle {
