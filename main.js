@@ -5,7 +5,7 @@ document.querySelectorAll('.toggle').forEach(toggle => {
     });
 
     toggle.querySelectorAll('.triangle').forEach(triangle => {
-        triangle.addEventListener('click', (e) => {
+        toggle.addEventListener('click', (e) => {
             toggle.querySelectorAll('.toggleContent').forEach(toggleContent => {
                 if (toggleContent.style.display === "block") {
                     triangle.style.transform = "rotateZ(180deg)";
